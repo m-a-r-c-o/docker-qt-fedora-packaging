@@ -6,11 +6,7 @@ RUN dnf -y group install 'Development Tools'
 RUN dnf -y install gcc-c++
 RUN dnf -y install fedora-packager
 RUN dnf -y install 'dnf-command(builddep)'
+RUN dnf -y install qt5-qtbase-devel
 
 RUN rpmdev-setuptree
-
-# Install dependencies for build. The image has to be rebuild if the
-#  dependencies of the application have changed.
-#COPY mdnote.spec /root/rpmbuild/SPECS
-#RUN dnf -y builddep /root/rpmbuild/SPECS/mdnote.spec
 
