@@ -1,4 +1,4 @@
-FROM fedora:24
+FROM registry.fedoraproject.org/fedora:26
 MAINTAINER Marco Cyriacks <marco@cyriacks.net>
 
 RUN dnf -y upgrade
